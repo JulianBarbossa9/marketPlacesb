@@ -11,17 +11,12 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { z } from "zod";
 import { AuthCredentialsValidator, TAuthCredentialsValidator } from "@/lib/validators/account-credential-validators";
 
 const page = () => {
   
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<TAuthCredentialsValidator>({
+  const { register,handleSubmit,formState: { errors },}= useForm<TAuthCredentialsValidator>({
     resolver: zodResolver(AuthCredentialsValidator),
   });
 
