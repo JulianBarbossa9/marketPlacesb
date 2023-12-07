@@ -68,6 +68,7 @@ const page = () => {
                   })}
                   placeholder="password"
                   {...register('password')}
+                  type="password"
                 />
               </div>
 
